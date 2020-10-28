@@ -1,0 +1,354 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Codevember</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript">
+        
+        var count01 = 0
+        function counter01(id) {
+
+            var checkBox = document.getElementById(id);
+            if (checkBox.checked == true){
+                count01++;
+            } else {
+                count01--;
+            }
+
+            if (count01 == 5) {
+                var pic = "https://vignette.wikia.nocookie.net/meme/images/f/f5/E21527AE-151B-4DA9-8AD7-195B5D1A1828.jpeg/revision/latest/scale-to-width-down/340?cb=20191001231306"
+                document.getElementById('bigpic1').src = pic.replace('90x90', '225x225');
+                document.getElementById('bigpic1').style.clip='rect(0, 100px, 200px, 0)'
+                document.getElementById('bigpic1').style.display='block';
+            } else {
+                document.getElementById('bigpic1').style.display='none';
+            }
+        }
+
+        var count02 = 0
+        function counter02(id) {
+
+            var checkBox = document.getElementById(id);
+            if (checkBox.checked == true){
+                count02++;
+            } else {
+                count02--;
+            }
+
+            if (count02 == 5) {
+                var pic = "https://vignette.wikia.nocookie.net/meme/images/f/f5/E21527AE-151B-4DA9-8AD7-195B5D1A1828.jpeg/revision/latest/scale-to-width-down/340?cb=20191001231306"
+                document.getElementById('bigpic2').src = pic.replace('90x90', '225x225');
+                document.getElementById('bigpic2').style.clip='rect(0, 100px, 200px, 0)'
+                document.getElementById('bigpic2').style.display='block';
+            } else {
+                document.getElementById('bigpic2').style.display='none';
+            }
+        }
+
+        var count03 = 0
+        function counter03(id) {
+
+            var checkBox = document.getElementById(id);
+            if (checkBox.checked == true){
+                count03++;
+            } else {
+                count03--;
+            }
+
+            if (count03 == 5) {
+                var pic = "https://vignette.wikia.nocookie.net/meme/images/f/f5/E21527AE-151B-4DA9-8AD7-195B5D1A1828.jpeg/revision/latest/scale-to-width-down/340?cb=20191001231306"
+                document.getElementById('bigpic3').src = pic.replace('90x90', '225x225');
+                document.getElementById('bigpic3').style.clip='rect(0, 100px, 200px, 0)'
+                document.getElementById('bigpic3').style.display='block';
+            } else {
+                document.getElementById('bigpic3').style.display='none';
+            }
+        }
+
+        var count04 = 0
+        function counter04(id) {
+
+            var checkBox = document.getElementById(id);
+            if (checkBox.checked == true){
+                count04++;
+            } else {
+                count04--;
+            }
+
+            if (count04 == 5) {
+                var pic = "https://i.ytimg.com/vi/s77tsEcW6wg/maxresdefault.jpg"
+                document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+                document.getElementById('bigpic').style.clip='rect(0, 100px, 200px, 0)'
+                document.getElementById('bigpic').style.display='block';
+            } else {
+                document.getElementById('bigpic').style.display='none';
+            }
+        }
+
+        var count05 = 0
+        function counter05(id) {
+
+            var checkBox = document.getElementById(id);
+            if (checkBox.checked == true){
+                count05++;
+            } else {
+                count05--;
+            }
+
+            if (count05 == 5) {
+                var pic = "https://i.ytimg.com/vi/s77tsEcW6wg/maxresdefault.jpg"
+                document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+                document.getElementById('bigpic').style.clip='rect(0, 100px, 200px, 0)'
+                document.getElementById('bigpic').style.display='block';
+            } else {
+                document.getElementById('bigpic').style.display='none';
+            }
+        }
+        //get the canvas
+        var canvas = $('div.canvas');
+        var backgroundImage = canvas.css('background-image');
+        //remove the background from canvas
+        canvas.css('background-image','none');
+        //number of columns and rows
+        var col = 8;
+        var row = 4;
+        var colWidth = canvas.width() / col;
+        var rowHeight = canvas.height() / row;
+        //loop through the cells
+        for(var i = 0; i < row; i++){
+            for(var j = 0; j < col; j++){
+                //append new cell to canvas
+                var cell = $("<div class='cell flipped'><div class='back'>?</div><div class='front'></div></div>")
+                        .width(colWidth).height(rowHeight).appendTo(canvas);
+                //set the background for the cell
+                //note that calculate the em unit for more flexible
+                //font-size
+                cell.find('.front')
+                    .css('background',backgroundImage)
+                    .css('background-position', -(j * colWidth) + 'px ' + -(i * rowHeight) + 'px');
+                //register click handler for the cell
+                cell.click(function(){$(this).toggleClass('flipped')});
+            }
+        }
+
+        
+    </script>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="grid-container">
+            <div class="grid-item"><b></b></div>
+            <div class="grid-item"><b>1</b></div>
+            <div class="grid-item"><b>2</b></div>
+            <div class="grid-item"><b>3</b></div>
+            <div class="grid-item"><b>4</b></div>
+            <div class="grid-item"><b>5</b></div>
+            <div class="grid-item"><b>6</b></div>
+            <div class="grid-item"><b>7</b></div>
+            <div class="grid-item"><b>8</b></div>
+            <div class="grid-item"><b>9</b></div>
+            <div class="grid-item"><b>10</b></div>
+            <div class="grid-item"><b>11</b></div>
+            <div class="grid-item"><b>12</b></div>
+            <div class="grid-item"><b>13</b></div>
+            <div class="grid-item"><b>14</b></div>
+            <div class="grid-item"><b>15</b></div>
+            <div class="grid-item"><b>16</b></div>
+            <div class="grid-item"><b>17</b></div>
+            <div class="grid-item"><b>18</b></div>
+            <div class="grid-item"><b>19</b></div>
+            <div class="grid-item"><b>20</b></div>
+            <div class="grid-item"><b>21</b></div>
+            <div class="grid-item"><b>22</b></div>
+            <div class="grid-item"><b>23</b></div>
+            <div class="grid-item"><b>24</b></div>
+            <div class="grid-item"><b>25</b></div>
+            <div class="grid-item"><b>26</b></div>
+            <div class="grid-item"><b>27</b></div>
+            <div class="grid-item"><b>28</b></div>
+            <div class="grid-item"><b>29</b></div>
+            <div class="grid-item"><b>30</b></div>
+        
+            
+            <div class="grid-item"><b>Carrie</b></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck01" onclick="counter01(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck02" onclick="counter02(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck03" onclick="counter03(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck04" onclick="counter04(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck05" onclick="counter05(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck06" onclick="counter06(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck07" onclick="counter07(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck08" onclick="counter08(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck09" onclick="counter09(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck10" onclick="counter10(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck11" onclick="counter11(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck12" onclick="counter12(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck13" onclick="counter13(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck14" onclick="counter14(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck15" onclick="counter15(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck16" onclick="counter16(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck17" onclick="counter17(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck18" onclick="counter18(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck19" onclick="counter19(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck20" onclick="counter20(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck21" onclick="counter21(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck22" onclick="counter22(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck23" onclick="counter23(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck24" onclick="counter24(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck25" onclick="counter25(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck26" onclick="counter26(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck27" onclick="counter27(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck28" onclick="counter28(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck29" onclick="counter29(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="carrieCheck30" onclick="counter30(id)"/></div>
+
+            <div class="grid-item"><b>Cooper</b></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck01" onclick="counter01(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck02" onclick="counter02(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck03" onclick="counter03(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck04" onclick="counter04(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck05" onclick="counter05(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck06" onclick="counter06(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck07" onclick="counter07(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck08" onclick="counter08(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck09" onclick="counter09(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck10" onclick="counter10(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck11" onclick="counter11(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck12" onclick="counter12(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck13" onclick="counter13(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck14" onclick="counter14(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck15" onclick="counter15(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck16" onclick="counter16(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck17" onclick="counter17(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck18" onclick="counter18(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck19" onclick="counter19(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck20" onclick="counter20(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck21" onclick="counter21(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck22" onclick="counter22(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck23" onclick="counter23(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck24" onclick="counter24(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck25" onclick="counter25(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck26" onclick="counter26(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck27" onclick="counter27(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck28" onclick="counter28(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck29" onclick="counter29(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="cooperCheck30" onclick="counter30(id)"/></div>
+
+            <div class="grid-item"><b>Michael</b></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck01" onclick="counter01(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck02" onclick="counter02(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck03" onclick="counter03(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck04" onclick="counter04(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck05" onclick="counter05(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck06" onclick="counter06(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck07" onclick="counter07(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck08" onclick="counter08(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck09" onclick="counter09(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck10" onclick="counter10(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck11" onclick="counter11(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck12" onclick="counter12(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck13" onclick="counter13(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck14" onclick="counter14(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck15" onclick="counter15(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck16" onclick="counter16(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck17" onclick="counter17(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck18" onclick="counter18(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck19" onclick="counter19(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck20" onclick="counter20(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck21" onclick="counter21(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck22" onclick="counter22(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck23" onclick="counter23(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck24" onclick="counter24(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck25" onclick="counter25(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck26" onclick="counter26(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck27" onclick="counter27(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck28" onclick="counter28(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck29" onclick="counter29(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="michaelCheck30" onclick="counter30(id)"/></div>
+
+            <div class="grid-item"><b>Ryan</b></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck01" onclick="counter01(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck02" onclick="counter02(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck03" onclick="counter03(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck04" onclick="counter04(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck05" onclick="counter05(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck06" onclick="counter06(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck07" onclick="counter07(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck08" onclick="counter08(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck09" onclick="counter09(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck10" onclick="counter10(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck11" onclick="counter11(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck12" onclick="counter12(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck13" onclick="counter13(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck14" onclick="counter14(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck15" onclick="counter15(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck16" onclick="counter16(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck17" onclick="counter17(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck18" onclick="counter18(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck19" onclick="counter19(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck20" onclick="counter20(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck21" onclick="counter21(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck22" onclick="counter22(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck23" onclick="counter23(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck24" onclick="counter24(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck25" onclick="counter25(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck26" onclick="counter26(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck27" onclick="counter27(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck28" onclick="counter28(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck29" onclick="counter29(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="ryanCheck30" onclick="counter30(id)"/></div>
+
+            <div class="grid-item"><b>Sheldon</b></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck01" onclick="counter01(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck02" onclick="counter02(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck03" onclick="counter03(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck04" onclick="counter04(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck05" onclick="counter05(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck06" onclick="counter06(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck07" onclick="counter07(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck08" onclick="counter08(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck09" onclick="counter09(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck10" onclick="counter10(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck11" onclick="counter11(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck12" onclick="counter12(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck13" onclick="counter13(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck14" onclick="counter14(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck15" onclick="counter15(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck16" onclick="counter16(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck17" onclick="counter17(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck18" onclick="counter18(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck19" onclick="counter19(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck20" onclick="counter20(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck21" onclick="counter21(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck22" onclick="counter22(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck23" onclick="counter23(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck24" onclick="counter24(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck25" onclick="counter25(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck26" onclick="counter26(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck27" onclick="counter27(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck28" onclick="counter28(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck29" onclick="counter29(id)"/></div>
+            <div class="grid-item"><input type="checkbox" id="sheldonCheck30" onclick="counter30(id)"/></div>
+
+        </div>
+
+        <div class="gallery"> 
+            <figure class=”gallery__item gallery__item--1">
+              <img src="https://vignette.wikia.nocookie.net/meme/images/f/f5/E21527AE-151B-4DA9-8AD7-195B5D1A1828.jpeg/revision/latest/scale-to-width-down/340?cb=20191001231306" style="width: 75%; display:none;" id="bigpic1" src="bigpic1">
+            </figure> 
+            <figure class=”gallery__item gallery__item--2">
+                <img src="https://vignette.wikia.nocookie.net/meme/images/f/f5/E21527AE-151B-4DA9-8AD7-195B5D1A1828.jpeg/revision/latest/scale-to-width-down/340?cb=20191001231306" style="width: 75%; display:none;" id="bigpic2" src="bigpic2">
+            </figure>
+            <figure class=”gallery__item gallery__item--3">
+                <img src="https://vignette.wikia.nocookie.net/meme/images/f/f5/E21527AE-151B-4DA9-8AD7-195B5D1A1828.jpeg/revision/latest/scale-to-width-down/340?cb=20191001231306" style="width: 75%; display:none;" id="bigpic3" src="bigpic3">
+            </figure>
+          </div>
+    </div>
+
+</body>
+
+</html>
